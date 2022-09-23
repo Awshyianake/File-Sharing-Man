@@ -2,7 +2,7 @@
 # FROM File-Sharing-Man <https://github.com/mrismanaziz/File-Sharing-Man/>
 # t.me/SharingUserbot & t.me/Lunatic0de
 
-from config import FORCE_SUB_CHANNEL1, FORCE_SUB_GROUP1, FORCE_SUB_CHANNEL2, FORCE_SUB_GROUP2
+from config import FORCE_SUB_CHANNEL1, FORCE_SUB_GROUP1, FORCE_SUB_CHANNEL2
 from pyrogram.types import InlineKeyboardButton
 
 
@@ -15,11 +15,10 @@ def start_button(client):
             ],
         ]
         return buttons
-    if not FORCE_SUB_GROUP1 and FORCE_SUB_GROUP2:
+    if not FORCE_SUB_GROUP1 and FORCE_SUB_CHANNEL1:
         buttons = [
             [
                 InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=client.invitelink2),
-                InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=client.invitelink3),
             ],
             [
                 InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help"),
@@ -46,11 +45,10 @@ def start_button(client):
             ],
             [
                 InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
-                InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=client.invitelink2),
+                InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=client.invitelink4),
             ],
             [
-                InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=client.invitelink4),
-                InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=client.invitelink3),
+                InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=client.invitelink2),
             ],
             [InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data="close")],
         ]
@@ -58,11 +56,10 @@ def start_button(client):
 
 
 def fsub_button(client, message):
-    if not FORCE_SUB_GROUP1 and FORCE_SUB_GROUP2:
+    if not FORCE_SUB_GROUP1 and FORCE_SUB_CHANNEL1:
         buttons = [
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
-                InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink3),
             ],
         ]
         try:
@@ -100,11 +97,10 @@ def fsub_button(client, message):
         buttons = [
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
-                InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
+                InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink4),
             ],
             [
-                InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink4),
-                InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink3),
+                InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
             ],
         ]
         try:
